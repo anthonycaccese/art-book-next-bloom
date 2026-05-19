@@ -1,0 +1,14 @@
+image commands
+
+480 height
+magick mogrify -resize x480 *.png
+magick mogrify -alpha set -channel A -evaluate min 
+
+768 height
+magick mogrify -resize x768 *.png
+
+720 height
+magick mogrify -resize x720 *.png
+
+set transparent
+magick mogrify -alpha set -channel A -evaluate min 60% *.png
