@@ -1,0 +1,362 @@
+# ============================================================
+# Bloom Theme Config
+# ============================================================
+# This file controls your theme. Copy it into your theme
+# folder and change whatever you like. Anything you leave
+# out will use Bloom's defaults (shown below).
+#
+# Lines starting with # are comments and are ignored.
+# Uncomment a line by removing the # at the start.
+# ============================================================
+
+theme_name=MyTheme
+creator=YourName
+
+# Main Menu (home screen)
+main_menu_view=list
+main_menu_fit=native
+main_menu_num_side=0
+main_menu_overlap=0
+main_menu_names=on
+main_menu_logos=off
+main_menu_hints=pill
+
+# Game List (inside systems, collections, favorites)
+gamelist_view=list
+gamelist_fit=native
+gamelist_num_side=0
+gamelist_overlap=0
+gamelist_names=on
+gamelist_logos=off
+gamelist_hints=pill
+
+# Global
+navigation=horizontal
+font=bpreplay
+selection=pill
+selection_width=auto
+square_pills=off
+gs_pills=off
+boxart_radius=0
+
+# Custom Colors (optional)
+# All four must be uncommented together for custom colors to apply.
+# If any is missing or commented out, Bloom uses the user's color
+# mode from Settings instead. Hex values, no # prefix.
+#color_bg=1A1A1A
+#color_text=FFFFFF
+#color_label=808080
+#color_popup=2A2A2A
+
+# Accent Color (optional, works on its own)
+# Used for the selected pill background, highlights, and focus.
+#accent=FF6B6B
+
+# Selected text color (optional)
+# Color of text inside the selection pill. If left unset, Bloom
+# picks black or white automatically based on the accent color.
+#selected_text=white
+
+
+# ============================================================
+# What Does Each Setting Do?
+# ============================================================
+#
+# Your theme controls two areas:
+#
+#   Main Menu  — the home screen where you pick a system
+#   Game List  — the list of games inside a system
+#
+# Both areas share the same settings (just with different
+# prefixes: main_menu_ or gamelist_). Settings that work
+# for one work for the other.
+#
+# Areas like Recents, Apps & Tools, and Settings are
+# controlled by Bloom and not affected by your theme.
+#
+# Note: Users can override font, hints, and selection
+# style in Settings > Appearance.
+#
+#
+# --- view ---
+# main_menu_view / gamelist_view
+#
+#   list      vertical list with the image on the right
+#   gallery   full-screen images you flip through
+#
+#
+# --- fit ---
+# main_menu_fit / gamelist_fit
+#
+#   Only used in gallery mode. Controls image scaling.
+#   native    show images at their original size
+#   fit       stretch images to fill the screen
+#
+#
+# --- num_side ---
+# main_menu_num_side / gamelist_num_side
+#
+#   Only used in gallery mode. Turns on carousel view.
+#   0         show one image at a time (default)
+#   1-3       show this many extra images on each side
+#
+#
+# --- overlap ---
+# main_menu_overlap / gamelist_overlap
+#
+#   Only used when num_side is greater than 0.
+#   Controls how many pixels carousel images overlap
+#   each other. 0 means no overlap.
+#
+#
+# --- names ---
+# main_menu_names / gamelist_names
+#
+#   on        show the name of each system or game
+#   off       hide names (navigate by image only)
+#
+#   Note: in list mode, names are always shown regardless
+#   of this setting. It only affects gallery mode.
+#
+#
+# --- logos ---
+# main_menu_logos / gamelist_logos
+#
+#   off       no logos (default)
+#   on        show logo images on top of system images
+#             put your logo PNGs in a logos/ folder
+#             inside your theme folder
+#
+#
+# --- hints ---
+# main_menu_hints / gamelist_hints
+#
+#   The button hints shown at the bottom of the screen.
+#   pill      hints with a rounded background (default)
+#   on        hints as plain text, no background
+#   off       no hints at all
+#
+#
+# --- navigation ---
+#
+#   Only used in gallery mode.
+#   horizontal    flip left/right to browse (default)
+#   vertical      flip up/down to browse
+#
+#
+# --- font ---
+#
+#   bpreplay      Bloom's default font (rounded, bold)
+#   roboto        a clean alternative font
+#   <custom>      use a custom font file you ship with
+#                 the theme. Drop MyFont.otf (or .ttf)
+#                 next to theme.cfg, then set font=MyFont
+#                 (no extension, case-sensitive).
+#
+#
+# --- selection ---
+#
+#   How the currently selected item is highlighted.
+#   pill      rounded background behind the text (default)
+#   text      just the text, no background
+#   Only affects main menu and game lists.
+#
+#
+# --- selection_width ---
+#
+#   Width of the selection pill.
+#   auto      pill hugs the text (default)
+#   full      pill spans the full row
+#   Only used when selection=pill.
+#
+#
+# --- square_pills ---
+#
+#   Square corners on every pill (selection, hints, popups).
+#   off       rounded pills (default)
+#   on        square corners everywhere
+#
+#
+# --- gs_pills ---
+#
+#   Style of the GameSwitcher panels.
+#   off       bars (default)
+#   on        rounded pills (the older look)
+#
+#
+# --- boxart_radius ---
+#
+#   Rounds the corners of game boxart images.
+#   0         square corners (default)
+#   1+        corner radius in pixels. Try values like
+#             8, 12, or 16 for a soft modern look.
+#             The value is in theme-asset pixels and
+#             scales automatically on fallback.
+#
+#
+# --- color_bg / color_text / color_label / color_popup ---
+#
+#   Theme color overrides. All four must be set together —
+#   if any one is missing, Bloom falls back to the user's
+#   color mode from Settings.
+#
+#   Use 6-character hex without the # prefix.
+#
+#   color_bg      main background color
+#   color_text    primary text color
+#   color_label   secondary text (subtitles, dim labels)
+#   color_popup   background of dialogs and popups
+#
+#
+# --- accent ---
+#
+#   Single accent color used for the selected pill, focus
+#   rings, and highlights. Works on its own — you don't
+#   need the four colors above for this to take effect.
+#   6-character hex, no # prefix.
+#
+#
+# --- selected_text ---
+#
+#   Color of text inside the selection pill.
+#   white     force white text on the pill
+#   black     force black text on the pill
+#   (unset)   Bloom picks automatically based on accent
+#
+#
+# ============================================================
+# Theme Images
+# ============================================================
+#
+# Put these files in your theme folder next to theme.cfg.
+# Everything is optional — Bloom fills in anything missing.
+#
+# A few things to know about image handling:
+#
+#   - PNG format, any resolution. Alpha/transparency is
+#     supported and used wherever appropriate.
+#   - Bloom auto-dithers gradients (Bayer 4x4) when displaying
+#     on RGB565 screens, with a small contrast boost to
+#     compensate for the dither wash. So you can ship clean
+#     32-bit PNGs with smooth gradients and they'll look good
+#     on every device.
+#   - If you ship a 640x480 fallback folder, Bloom auto-scales
+#     the assets up for higher-res screens to keep the visual
+#     proportions consistent.
+#
+#
+# --- Previews ---
+# Shown in the theme picker (Settings > Appearance > Theme).
+# You can include up to 8 and they'll cycle like a slideshow.
+#
+#   preview.png                your main preview (recommended)
+#   preview2.png               additional previews
+#   preview3.png               ...
+#   preview8.png               up to 8 total
+#
+#
+# --- Backgrounds ---
+# Shown behind your content. Keep them dark and subtle
+# so text stays readable.
+#
+#   background-main.png        behind the main menu
+#   background-gamelist.png    behind game lists, favorites,
+#                              and collections
+#
+#
+# --- Boxart ---
+#
+#   boxart.png                 a custom panel shown behind
+#                              game boxart images in list mode
+#
+#   The panel is loaded at native size (not stretched) and
+#   centered vertically on screen. It sits on the right side
+#   of the game list, with the boxart image centered inside it.
+#
+#   Panel width follows the user's boxart size setting in
+#   Settings > Appearance:
+#
+#     small   ≈ 30% of screen width
+#     medium  ≈ 40% of screen width   (default)
+#     large   ≈ 50% of screen width
+#
+#   Game list text auto-truncates at the panel's left edge so
+#   long titles never run under the boxart. Parts of your panel
+#   that fall outside the active area at smaller sizes simply
+#   go off-screen — design one asset and let it adapt.
+#
+#   See also: boxart_radius (in the config above) to round the
+#   corners of the boxart images themselves.
+#
+#
+# --- Footers ---
+# Replace the default button hints with your own image.
+# These should be full-width PNGs. Transparency is supported.
+#
+#   footer_main.png            for the main menu
+#   footer_gamelist.png        for game lists
+#
+#
+# --- System & Collection Images ---
+# Name each image to match the folder it represents.
+# For example, if your system folder is called
+# "Game Boy Advance (GBA)", use "Game Boy Advance (GBA).png"
+#
+# Bloom also accepts a shortcut using just the platform tag
+# in parentheses. So you can name an image "(GBA).png" and
+# it will match any folder ending in "(GBA)". This makes it
+# easy to ship one image set that works across users with
+# slightly different folder names.
+#
+#   (name).png                 the image for that system
+#   (TAG).png                  shortcut by platform tag
+#                              e.g. (GBA).png, (PSX).png
+#   selected/(name).png        a highlighted version shown
+#                              when the system is selected
+#   selected/(TAG).png         tag shortcut for selected
+#   logos/(name).png           a logo shown on top of the
+#                              system image (needs logos=on)
+#   logos/(TAG).png            tag shortcut for logos
+#   default.png                used when no matching image
+#                              is found for a system
+#
+#
+# --- Favorites ---
+# Special images for the Favorites entry on the main menu.
+# Bloom checks both lowercase and capitalized filenames.
+#
+#   favorites.png              image for the Favorites entry
+#   selected/favorites.png     highlighted version
+#   logos/favorites.png        logo overlay (needs logos=on)
+#
+#
+# --- Tools / App Icons ---
+# Custom icons for pinned apps in Apps & Tools.
+# Place these in a tools/ folder inside your theme folder.
+# Filenames are lowercase, no spaces, no .pak extension.
+# Example: BitPal.pak becomes tools/bitpal.png
+#
+#   tools/bitpal.png           icon for the BitPal app
+#   tools/<appname>.png        icon for any pinned app
+#
+#
+# --- Special Screens ---
+# Full-screen images shown during system events. Optional.
+#
+#   poweroff.png               shown when the device powers
+#                              off, instead of the default
+#                              shutdown text
+#   quicksave.png              shown when powering off from
+#                              inside a game (auto-saves
+#                              and resumes on next boot)
+#
+#
+# --- Custom Font ---
+# If you set font=<custom_name> in the config above,
+# drop the matching font file next to theme.cfg.
+# Bloom looks for .otf first, then .ttf.
+#
+#   <FontName>.otf             your custom font (preferred)
+#   <FontName>.ttf             or TrueType, also works
+#
+# ============================================================
