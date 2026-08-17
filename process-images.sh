@@ -15,11 +15,10 @@ logo_count=0
 for i in "${!RESOLUTIONS[@]}"; do
   res="${RESOLUTIONS[$i]}"
   height="${HEIGHTS[$i]}"
-  selected_dir="$OUT_BASE/$res/selected"
   root_dir="$OUT_BASE/$res"
   logos_dir="$OUT_BASE/$res/logos"
 
-  mkdir -p "$selected_dir" "$logos_dir"
+  mkdir -p "$logos_dir"
 
   echo "Processing $res (height: $height)..."
 
@@ -29,15 +28,7 @@ for i in "${!RESOLUTIONS[@]}"; do
     magick "$src" -filter point -resize "x${height}" "$root_dir/$filename"
   done
 
-  # Action 2: carousel → root resolution folder (40% opacity, nearest-neighbor)
-  #for src in "$CAROUSEL_SRC"/*.png; do
-  #  filename="$(basename "$src")"
-  #  magick "$src" -filter point -resize "x${height}" \
-  #    -alpha set -channel Alpha -evaluate multiply 0.4 +channel \
-  #    "$root_dir/$filename"
-  #done
-
-  # Action 3: logos → logos/
+  # Action 2: logos → logos/
   for src in "$LOGOS_SRC"/*.png; do
     filename="$(basename "$src")"
     magick "$src" -resize "x${height}" "$logos_dir/$filename"
