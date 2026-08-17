@@ -26,16 +26,16 @@ for i in "${!RESOLUTIONS[@]}"; do
   # Action 1: carousel → selected/ (full opacity, nearest-neighbor)
   for src in "$CAROUSEL_SRC"/*.png; do
     filename="$(basename "$src")"
-    magick "$src" -filter point -resize "x${height}" "$selected_dir/$filename"
+    magick "$src" -filter point -resize "x${height}" "$root_dir/$filename"
   done
 
   # Action 2: carousel → root resolution folder (40% opacity, nearest-neighbor)
-  for src in "$CAROUSEL_SRC"/*.png; do
-    filename="$(basename "$src")"
-    magick "$src" -filter point -resize "x${height}" \
-      -alpha set -channel Alpha -evaluate multiply 0.4 +channel \
-      "$root_dir/$filename"
-  done
+  #for src in "$CAROUSEL_SRC"/*.png; do
+  #  filename="$(basename "$src")"
+  #  magick "$src" -filter point -resize "x${height}" \
+  #    -alpha set -channel Alpha -evaluate multiply 0.4 +channel \
+  #    "$root_dir/$filename"
+  #done
 
   # Action 3: logos → logos/
   for src in "$LOGOS_SRC"/*.png; do
