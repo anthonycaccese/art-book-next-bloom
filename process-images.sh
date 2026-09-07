@@ -25,7 +25,9 @@ for i in "${!RESOLUTIONS[@]}"; do
   # Action 1: carousel → selected/ (full opacity, nearest-neighbor)
   for src in "$CAROUSEL_SRC"/*.png; do
     filename="$(basename "$src")"
-    magick "$src" -filter point -resize "x${height}" "$root_dir/$filename"
+    magick "$src" -filter point -resize "x${height}" \
+      -alpha set -channel Alpha -evaluate multiply 0.85 +channel \
+      "$root_dir/$filename"
   done
 
   # Action 2: logos → logos/
